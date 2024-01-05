@@ -1,0 +1,61 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.login{
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border-radius: 2rem;
+    overflow: hidden;
+    @include m.tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .login-image{
+        background-image: url(../img/product.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 15rem;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+        h1{
+            color: v.$blanco;
+            z-index: 1;
+        }
+        @include m.tablet {
+            height: 60rem;
+        }
+    }
+}
+.login-form{
+    padding: 2rem;
+    background-color: v.$blanco;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .form{
+        margin: 3rem 0;
+        fieldset{
+            border-radius: .5rem;
+            .login-input{
+                background-blend-mode: luminosity;
+                opacity: 1;
+                background-color: lighten(v.$green, 20%);
+                color: v.$brown;
+            }
+        }
+    }
+}

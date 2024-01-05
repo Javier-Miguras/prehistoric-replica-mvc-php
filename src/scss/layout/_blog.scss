@@ -1,0 +1,46 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.blog{
+    margin-bottom: 4rem;
+}
+
+.posts{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+    @include m.tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include m.desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .post{
+        background-color: v.$blanco;
+        padding: 2rem;
+        border-radius: 1rem;
+        transition: scale 300ms ease;
+        &:hover{
+            scale: 1.05;
+        }
+        .meta{
+            color: v.$orange;
+            transition: color 300ms ease;
+            cursor: pointer;
+            &:hover{
+                color: darken(v.$orange, 10%);
+            }
+        }
+        .post-heading{
+            .post-title{
+                color: darken(v.$green, 10%);
+                font-size: 2.6rem;
+                transition: color 300ms ease;
+                &:hover{
+                    color: v.$green;
+                }
+            }
+        }
+    }
+}

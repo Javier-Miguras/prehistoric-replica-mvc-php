@@ -1,0 +1,38 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.social-icons{
+    text-align: center;
+    svg{
+        background-color: v.$green;
+        color: v.$brown;
+        padding: 1rem;
+        border-radius: 100%;
+        transition: background-color 300ms ease, transform 300ms ease;
+        margin: 1.4rem;
+        @include m.tablet {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &:hover{
+            background-color: v.$orange;
+            transform: scale(1.1);
+        }
+    }
+}
+.footer-nav{
+    padding: 2rem 0 0 0;
+    @include m.tablet {
+        padding: 3rem 0 0 0;
+    }
+    .nav{
+        @include m.tablet {
+            text-align: center;
+        }
+        a{
+            @include m.tablet {
+                padding: 0 3rem;
+            }
+        }
+    }
+}

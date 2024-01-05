@@ -1,0 +1,32 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.alerta{
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: v.$blanco !important;
+    font-weight: v.$regular;
+    font-size: 1.8rem;
+    font-family: v.$fuente_principal;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    &:last-of-type{
+        margin-bottom: 4rem;
+    }
+    &.error{
+        background-color: v.$btnRed;
+    }
+    &.exito{
+        background-color: v.$btnGreen;
+    }
+}
+.user-name{
+    text-align: center;
+    color: v.$brown;
+    font-size: 2rem;
+    span{
+        color: darken(v.$green, 10%);
+        font-weight: v.$bold;
+    }
+}

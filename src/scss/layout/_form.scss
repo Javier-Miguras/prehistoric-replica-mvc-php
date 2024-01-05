@@ -1,0 +1,25 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.form{
+    font-family: v.$fuente_secundaria;
+    p{
+        color: v.$brown;
+    }
+    label{
+        color: v.$brown;
+        font-weight: v.$bold;
+    }
+    input:not([type="submit"]),
+    textarea,
+    select{
+        padding: 1rem;
+        border-radius: .5rem;
+        border: .1rem solid v.$green;
+        width: 100%;
+        margin: 1rem 0 2rem 0;
+    }
+    textarea{
+        height: 25rem;
+    }
+}

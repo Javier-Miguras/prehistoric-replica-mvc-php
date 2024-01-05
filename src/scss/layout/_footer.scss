@@ -1,0 +1,23 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer{
+    background-color: v.$blanco;
+    .contenedor-footer{
+        padding: 3rem 0;
+        @include m.tablet {
+            padding: 5rem 0;
+        }
+    }
+}
+.copyright{
+    background-color: v.$brown;
+}
+.footer-copyright{
+    text-align: center;
+    color: v.$blanco;
+    padding: 1rem 0;
+    p{
+        margin: 0;
+    }
+}

@@ -1,0 +1,92 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.explore{
+    padding: 4rem 0;
+    p{
+        color: v.$brown;
+    }
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .explore-content,
+    .explore-img,
+    .explore-info,
+    .explore-seller{
+        padding: 2rem;
+        background-color: v.$blanco;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        &:last-of-type{
+            margin: 0;
+        }
+        @include m.tablet {
+            margin: unset;
+        }
+    }
+    .explore-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        @include m.desktop {
+            gap: 3rem;
+        }
+        p{
+            font-size: 2.4rem;
+        }
+        span{
+            color: v.$green;
+            font-weight: v.$bold;
+        }
+        h2,
+        p{
+            margin: 0;
+        }
+        .price{
+            color: v.$orange;
+        }
+        h2{
+            font-size: 2.8rem;
+            @include m.tablet {
+                font-size: 3.6rem;
+            }
+        }
+    }
+    .explore-content{
+        @include m.tablet {
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+        h4{
+            color: v.$brown;
+            margin-bottom: 1rem;
+        }
+        hr{
+            color: v.$lightGreen;
+            opacity: 0.5;
+        }
+        p{
+            margin-top: 2rem;
+        }
+    }
+    .explore-seller{
+        h4{
+            color: v.$brown;
+            margin-bottom: 1rem;
+        }
+        hr{
+            color: v.$lightGreen;
+            opacity: 0.5;
+        }
+        p{
+            margin-top: 2rem;
+            span{
+                font-weight: v.$bold;
+            }
+        }
+    }
+}

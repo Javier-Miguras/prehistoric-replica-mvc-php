@@ -1,0 +1,64 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.user-admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-buttons{
+    padding-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-title{
+    margin: 4rem 0;
+}
+
+.admin-table{
+    display: inline-table;
+    width: 100%;
+    font-family: v.$fuente_secundaria;
+    &:last-of-type{
+        margin-bottom: 6rem;
+    }
+    thead{
+        background-color: v.$brown;
+        color: v.$blanco;
+        th{
+            padding: 1rem 1rem;
+        }
+    }
+    tbody{
+        background-color: v.$blanco;
+        color: v.$brown;
+        text-align: center;
+        tr{
+            td{
+                padding: 2rem 0;
+                img{
+                    max-width: 25rem;
+                    width: 100%;
+                }
+                .delete{
+                    width: 100%;
+                }
+                .update{
+                    margin-bottom: 1rem;
+                }
+                .update,
+                .delete{
+                    display: block;
+                }
+            }
+            .td-buttons{
+                padding: 1rem;
+            }
+        }
+    }
+}

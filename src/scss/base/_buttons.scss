@@ -1,0 +1,69 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.btn{
+    border: none;
+    cursor: pointer;
+    padding: 2rem;
+    text-align: center;
+    color: v.$blanco;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-family: v.$fuente_principal;
+    font-weight: v.$regular;
+    font-size: 2rem;
+}
+
+.btn-orange{
+    background-color: v.$orange;
+    transition: background-color 300ms ease;
+    &:hover{
+        background-color: darken(v.$orange, 10%);
+    }
+}
+
+.btn-ok{
+    background-color: v.$btnOrange;
+    transition: background-color 300ms ease;
+    &:hover{
+        background-color: darken(v.$btnOrange, 10%);
+    }
+}
+
+.btn-green{
+    background-color: v.$green;
+    transition: background-color 300ms ease;
+    &:hover{
+        background-color: darken(v.$green, 10%);
+    }
+}
+
+.btn-red{
+    background-color: v.$btnRed;
+    transition: background-color 300ms ease;
+    &:hover{
+        background-color: darken(v.$btnRed, 10%);
+    }
+}
+
+.btn-blue{
+    background-color: v.$azul;
+    transition: background-color 300ms ease;
+    &:hover{
+        background-color: darken(v.$azul, 10%);
+    }
+}
+
+.btn-gray{
+    padding: 1rem;
+    border-radius: 0;
+    background-color: v.$gray;
+    transition: background-color 300ms ease;
+    &:hover{
+        background-color: darken(v.$gray, 10%);
+    }
+}
+
+.dsp-block{
+    display: block;
+}

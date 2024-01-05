@@ -1,0 +1,85 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+header{
+    background-color: v.$blanco;
+    padding: 1.3rem 0;
+    .header-content{
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-image{
+            text-align: center;
+            margin-bottom: 1rem;
+            @include m.tablet {
+                margin: 0;
+            }
+            img{
+                max-width: 25rem;
+            }
+        }
+    }
+}
+
+.header-nav{
+    a{
+        border-bottom: v.$gris solid .1rem;
+        @include m.tablet{
+            border: none;
+        }
+    }
+    .hamburguer-button{
+        color: v.$blanco;
+        background-color: v.$green;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: 0;
+        transition: background-color 300ms ease;
+        cursor: pointer;
+        &:hover{
+            background-color: darken(v.$green, 10%);
+        }
+        @include m.tablet {
+            display: none;
+        }
+    }
+    .nav{
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+    }
+}
+
+.nav-both{
+    .nav{
+        a{
+            font-size: 2;
+            font-weight: v.$regular;
+            color: darken(v.$green, 10%);
+            display: block;
+            text-align: center;
+            margin-bottom: 1rem;
+            transition: color 300ms ease;
+            &:last-child{
+                margin: 0;
+            }
+            &:first-child{
+                margin-top: 1rem;
+            }
+            @include m.tablet {
+                display: unset;
+                margin: 0;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+            &:hover{
+                color: v.$orange;
+            }
+        }
+    }
+}

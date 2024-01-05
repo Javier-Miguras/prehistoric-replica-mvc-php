@@ -1,0 +1,31 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.entry{
+    background-color: v.$blanco;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    .entry-head{
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    }
+    .entry-content{
+        margin-top: 2rem;
+        p{
+            color: v.$brown;
+        }
+        hr{
+            color: v.$orange;
+            opacity: 0.5;
+        }
+    }
+    .entry-meta{
+        p{
+            color: darken(v.$green, 10%);
+        }
+    }
+}

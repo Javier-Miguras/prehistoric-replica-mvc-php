@@ -1,0 +1,42 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.about-us{
+    // padding-bottom: 6rem;
+    .about-content{
+        padding: 2rem;
+        background-color: v.$blanco;
+        border-radius: 1rem;
+        margin-bottom: 4rem;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+        .about-image{
+            background-image: url("/build/img/about-2.jpeg");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 40rem;
+            margin-bottom: 4rem;
+            @include m.tablet {
+                height: unset;
+                margin-bottom: unset;
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+        }
+        .about-text{
+            p{
+                color: v.$brown;
+            }
+            span{
+                color: v.$orange;
+                font-size: 2rem;
+                font-weight: v.$bold;
+
+            }
+        }
+    }
+}

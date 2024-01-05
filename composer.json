@@ -1,0 +1,23 @@
+{
+    "name": "javier/prehistoric-replica-mvc",
+    "description": "proyecto PHP8, MVC, SQL, SASS, Gulp",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models"
+        }
+    },
+    "authors": [
+        {
+            "name": "Javier Miguras",
+            "email": "javier@despegaweb.cl"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "intervention/image": "2.7",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
